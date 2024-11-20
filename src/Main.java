@@ -42,16 +42,39 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("*** TRADUCTOR DE ASCII A CODIGO MORSE ***");
-        System.out.println("Introducir una palabra:");
-        String frase = sc.nextLine().toUpperCase();
+        boolean t = true;
+        while (t){
+            System.out.println("\nSELECCIONE UNA OPCION:");
+            System.out.println("1. Traducir de alfabeto a morse: ");
+            System.out.println("2. Traducir de morse a alfabeto: ");
+            System.out.println("3. Salir");
+            int opcion = sc.nextInt();
+            switch (opcion) {
+                case 1:
+                    sc.nextLine();
+                    System.out.println("*** TRADUCTOR DE ASCII A CODIGO MORSE ***");
+                    System.out.println("Introducir una palabra/frase:");
+                    String frase = sc.nextLine().toUpperCase();
 
-        for (char ch : frase.toCharArray()) {
-            if (!(ch == ' ')){
-                convertiMorse(ch);
-            } else {
-                System.out.print("/");
+                    for (char ch : frase.toCharArray()) {
+                        if (!(ch == ' ')){
+                            convertiMorse(ch);
+                        } else {
+                            System.out.print("/");
+                        }
+                    }
+                    break;
+                case 2:
+                    //Codigo de jers
+
+                case 3:
+                    System.out.println("Gracias por usar mi programa");
+                    t = false;
+                default:
+                    System.out.println("Opción no válida.");
             }
         }
+
+        sc.close();
     }
 }

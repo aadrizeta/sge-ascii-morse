@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/traductor-Ascii-Morse.iml" filepath="$PROJECT_DIR$/traductor-Ascii-Morse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/traductor-Alfabeto-Morse.iml" filepath="$PROJECT_DIR$/traductor-Alfabeto-Morse.iml" />
     </modules>
   </component>
 </project>
