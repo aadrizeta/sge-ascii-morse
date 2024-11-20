@@ -36,6 +36,49 @@ public class Main {
         String morse = mapaMorse.get(ch);
         System.out.print(morse + " ");
     }
+    public static String morseALetras(String mor){
+        HashMap<String, String> codigoMorse = new HashMap<String, String>();
+        codigoMorse.put( ".-","A");
+        codigoMorse.put("-...","B");
+        codigoMorse.put("-.-.","C");
+        codigoMorse.put("-..","D");
+        codigoMorse.put(".","E");
+        codigoMorse.put("..-.","F");
+        codigoMorse.put( "--.","G");
+        codigoMorse.put("....","H");
+        codigoMorse.put("..","I");
+        codigoMorse.put(".---","J");
+        codigoMorse.put("-.-","K");
+        codigoMorse.put(".-..","L");
+        codigoMorse.put("--","M");
+        codigoMorse.put("-.","N");
+        codigoMorse.put("---","O");
+        codigoMorse.put(".--.","P");
+        codigoMorse.put("--.-","Q");
+        codigoMorse.put(".-.","R");
+        codigoMorse.put("...","S");
+        codigoMorse.put("-","T");
+        codigoMorse.put("..-","U");
+        codigoMorse.put( "...-","V");
+        codigoMorse.put(".--","W");
+        codigoMorse.put("-..-","X");
+        codigoMorse.put("-.--","Y");
+        codigoMorse.put("--..","Z");
+        codigoMorse.put("/"," ");
+
+        String codT[] = mor.split(" ");
+        String palabra = "";
+
+        for (int i = 0; i < codT.length;i++) {
+            palabra+=codigoMorse.get(codT[i]);
+
+        }
+
+        String retorno=" " +palabra;
+        return retorno;
+
+    }
+
 
 
     public static void main(String[] args) {
@@ -65,11 +108,17 @@ public class Main {
                     }
                     break;
                 case 2:
-                    //Codigo de jers
+                    sc.nextLine();
+                    System.out.println("*** TRADUCTOR DE  CODIGO MORSE A ASCII  ***");
+                    System.out.println("Introducir una palabra/frase en morse:");
+                     frase = sc.nextLine();
 
+                    System.out.println("palabra/frase traducida del morse:"+morseALetras(frase));
+                    break;
                 case 3:
                     System.out.println("Gracias por usar mi programa");
                     t = false;
+                    break;
                 default:
                     System.out.println("Opción no válida.");
             }
